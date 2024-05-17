@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "RS6";
+  src: url("../../fonts/R6S-Regular.woff2") format("woff2"), url("../../fonts/R6S-Regular.woff") format("woff"), url("../../fonts/R6S-Regular.otf") format("opentype"), url("../../fonts/R6S-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+.siteNavigation {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 900;
+  -webkit-transition: top 0.4s;
+  -o-transition: top 0.4s;
+  transition: top 0.4s;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 0 0 10px;
+  color: #fff;
+  font-family: "R6S", "Roboto" sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #24262a;
+  text-transform: uppercase;
+}
+.siteNavigation .siteNavigation__hamburgerContainer,
+.siteNavigation .siteNavigation__main--mobile,
+.siteNavigation .siteNavigation__main--mobile .globalNavigation__buttons__0,
+.siteNavigation .siteNavigation__main--mobile .globalNavigation__buttons__1 {
+  display: none;
+}
+.siteNavigation .gameSiteNavigation .gameSiteNavigation__drawers__buttons--mobile,
+.siteNavigation .gameSiteNavigation .gameSiteNavigation__drawers__lastButton--mobile {
+  display: none;
+}
+.siteNavigation .siteNavigation__container {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  position: relative;
+}
+.siteNavigation .siteNavigation__logo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  max-height: 100%;
+  margin: 0 15px;
+}
+.siteNavigation .siteNavigation__logo img {
+  max-width: 150px;
+}
+.siteNavigation .siteNavigation__main {
+  width: auto;
+  height: 100%;
+  font-size: 20px;
+  line-height: 20px;
+}
+.siteNavigation .siteNavigation__main nav {
+  width: 100%;
+  height: 100%;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers .siteNavigation__nav-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px;
+  text-decoration: none;
+  transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1), background-color;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers .siteNavigation__nav-item:before {
+  background: #00ffe5;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers .siteNavigation__nav-item:after,
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers .siteNavigation__nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+  height: 0;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers button {
+  min-width: 70px;
+  padding: 0;
+  text-transform: uppercase;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers button span {
+  display: inline-flex;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers .siteNavigation__nav-item__drawer {
+  display: flex;
+  flex-direction: column;
+  top: 75px;
+  left: 0;
+  max-height: 0;
+  margin-top: -5px;
+  padding: 0;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: content-box;
+  transition: max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s ease-in-out 0.3s;
+  min-width: 100%;
+  height: auto;
+}
+.siteNavigation .siteNavigation__main nav .siteNavigation__drawers span {
+  z-index: 1;
+}
+
+body:not(.isMobile) .siteNavigation__nav-item.is-drawer:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 100%;
+  height: 0;
+  background: #00ffe5;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:after,
+:before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+body {
+  background: #212e50 url(https://static-dm.ubisoft.com/siege/prod/7907369fa863844fc1ae432a9ca0e610.jpg) 50% 50% repeat-y;
+  background-size: 100%;
+  font-family: "RS6", "Roboto", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 1em;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[tabindex],
+a,
+area,
+button,
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+  -webkit-appearance: button;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a {
+  transition-property: color, opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=main.css.map */
